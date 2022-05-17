@@ -1,0 +1,89 @@
+/* var */
+/* font */
+$font-roboto:'Roboto', sans-serif;
+$font-monserrat:'Montserrat', sans-serif;
+
+
+/* color */
+$--bg-main: #D15F0D;
+$--bg-card:#181818;
+
+
+/* commponents */
+.btn-main{
+   display: flex;
+   justify-content: center;
+   align-self: center;
+   padding: 9px 25px;
+   background: linear-gradient(180deg, $--bg-main 0%, #9E4200 100%);
+   border-radius: 6px;
+   &:hover{
+      background: $--bg-main;
+      filter: drop-shadow(0px 0px 8px #FF832A);
+   }
+   .btn-text{
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+   }
+}
+
+.btn-second{
+   display: flex;
+   justify-content: center;
+   align-self: center;
+   padding: 9px 25px;
+   background: #fff;
+   border: 2px solid $--bg-main;
+   border-radius: 6px;
+   &:hover{
+      background: $--bg-main;
+      filter: drop-shadow(0px 0px 8px #FF832A);
+   }
+   span{
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $--bg-card;
+   }
+}
+
+.h2-tittle{
+   font-family: $font-monserrat;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 160%;
+}
+
+.roboto-description{
+   font-family: $font-roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 190%;
+}
+
+/* aside */
+.h2-tittle--aside{
+   font-family: $font-roboto;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 160%;
+   color: #fff;
+}
+
+/* container */
+
+.container{
+   width: 100%;
+   max-width: 1520px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
