@@ -45,7 +45,26 @@ function setSubmitBtnStatus(form, input, event) {
     event.preventDefault();
 
     if (inputLength > 0) {
-        form.submit();
+            // form.submit(); отправка
     }
+    roflPlayer(inputLength > 0);
 }
 
+// rofl script
+const roflElement = createRoflElement();
+const containerElement = document.querySelector('.container')
+
+function roflPlayer (bool) {
+    containerElement.appendChild(roflElement);
+    bool ? roflElement.pause() : roflElement.play();
+}
+
+function createRoflElement () {
+    const roflElement = document.createElement('audio')
+    roflElement.style.cssText = 'display: none; position:fixed; z-index: 1000;'
+    roflElement.setAttribute('autoplay', 'false');
+    roflElement.setAttribute('src', '../assets/audio/rofl-audio.mp3');
+
+    return roflElement;
+
+}
