@@ -1,20 +1,6 @@
 const {log} = console
 //Header
 
-//Search
-const getInputNode = document.querySelector('.header-search'),
-    getBtnSearchNode = document.querySelector('.btn-search')
-
-function checkErrorInput() {
-    const getValueInput = getInputNode.value
-
-    if (getValueInput.trim().length <= 0) {
-        getInputNode.style.border = '2px solid black'
-    } else  {
-        getInputNode.style.border = 'none'
-    }
-}
-
 getBtnSearchNode.addEventListener('click', checkErrorInput)
 //Slider first screen
 const swiper = new Swiper(('.swiper'), {
@@ -27,44 +13,6 @@ const swiper = new Swiper(('.swiper'), {
     },
 })
 
-// if (getValueInput.trim().length <= 0){
-//    getInputNode.setAttribute('required');
-// }
-// валидатор для поисковой формы
-const searchInput = document.querySelector('.header-search');
-const searchBtn = document.querySelector('.btn-search');
-const searchForm = document.querySelector('.search');
 
-searchBtn.onclick = (event) => {
-    setSubmitBtnStatus(searchForm, searchInput, event)
-}
 
-function setSubmitBtnStatus(form, input, event) {
-    const inputLength = input.value.trim().length;
 
-    event.preventDefault();
-
-    if (inputLength > 0) {
-            // form.submit(); отправка
-    }
-    roflPlayer(inputLength > 0);
-}
-
-// rofl script
-const roflElement = createRoflElement();
-const containerElement = document.querySelector('.container')
-
-function roflPlayer (bool) {
-    containerElement.appendChild(roflElement);
-    bool ? roflElement.pause() : roflElement.play();
-}
-
-function createRoflElement () {
-    const roflElement = document.createElement('audio')
-    roflElement.style.cssText = 'display: none; position:fixed; z-index: 1000;'
-    roflElement.setAttribute('autoplay', 'false');
-    roflElement.setAttribute('src', '../assets/audio/rofl-audio.mp3');
-
-    return roflElement;
-
-}
