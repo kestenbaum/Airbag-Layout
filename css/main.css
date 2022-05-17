@@ -333,10 +333,35 @@ span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
   gap: 15px;
+}
+
+.header-social__block a {
+  height: 23px;
+  width: 23px;
+}
+
+.header-social__block a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.header-social__block a img {
+  height: 100%;
+  width: 100%;
+}
+
+.header-social__block .viber {
+  height: 26px;
+  width: 26px;
 }
 
 .header-social__description {
@@ -353,6 +378,7 @@ span {
 
 .header-social__description span {
   max-width: 125px;
+  text-align: center;
 }
 
 /* Header Navigation */
@@ -377,6 +403,7 @@ span {
 }
 
 .nav-list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,7 +415,23 @@ span {
           align-items: center;
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
-  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.nav-list::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #fff;
+}
+
+.nav-list:hover::after {
+  width: 100%;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .nav-link {
@@ -397,6 +440,7 @@ span {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  padding: 10px 25px;
   color: #fff;
 }
 
@@ -407,6 +451,7 @@ span {
   display: flex;
   background: #D15F0D;
   padding: 5px 0;
+  margin-left: 20px;
 }
 
 .btn-search {
@@ -417,6 +462,12 @@ span {
   cursor: pointer;
   border-left: 2px solid #C4C4C4;
   border-radius: 2px;
+}
+
+.btn-search:hover {
+  background: #D15F0D;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .header-search {
@@ -439,6 +490,22 @@ span {
 .header-search:focus {
   border: none;
   outline: none;
+}
+
+.header-search:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.header-search:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.header-search:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.header-search:focus::placeholder {
+  color: transparent;
 }
 
 .first-screen {
@@ -482,10 +549,10 @@ span {
 }
 
 .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background: #fff;
-  margin: 0 16px !important;
+  margin: 0 10px !important;
 }
 
 .swiper-pagination-bullet-active {
