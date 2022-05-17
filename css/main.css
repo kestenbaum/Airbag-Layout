@@ -65,7 +65,7 @@ span {
           justify-content: center;
   -ms-flex-item-align: center;
       align-self: center;
-  padding: 9px 25px;
+  padding: 9px 25px !important;
   background: -webkit-gradient(linear, left top, left bottom, from(#D15F0D), to(#9E4200));
   background: linear-gradient(180deg, #D15F0D 0%, #9E4200 100%);
   border-radius: 6px;
@@ -772,6 +772,7 @@ span {
 .aside-card h3,
 .aside-rewies h3 {
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .aside-card p,
@@ -989,21 +990,28 @@ span {
 }
 
 /* Works */
+.works {
+  padding: 20px 0;
+}
+
 .tittle-works {
   margin-bottom: 44px;
   padding-left: 29px;
   border-left: 4px solid #D15F0D;
 }
 
-.slider {
-  margin-bottom: 30px;
+.wrapper-cards__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.slider-slide {
-  max-width: 504px;
-}
-
-.slider-wrapper {
+.wrapper-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1017,14 +1025,18 @@ span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   max-width: 504px;
+  margin: 0 15px 15px 15px;
 }
 
-.slider-wrapper img {
+.wrapper-card img {
   width: 100%;
   height: 100%;
   max-width: 500px;
@@ -1032,7 +1044,7 @@ span {
   padding: 20px;
 }
 
-.slider-description__block {
+.description__block {
   padding: 20px;
 }
 

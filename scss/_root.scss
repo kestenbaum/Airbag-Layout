@@ -14,7 +14,7 @@ $--bg-card:#181818;
    display: flex;
    justify-content: center;
    align-self: center;
-   padding: 9px 25px;
+   padding: 9px 25px !important;
    background: linear-gradient(180deg, $--bg-main 0%, #9E4200 100%);
    border-radius: 6px;
    &:hover{
