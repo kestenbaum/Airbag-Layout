@@ -126,6 +126,7 @@
 .liberties-cards{
    display: flex;
    flex-wrap: wrap;
+   justify-content: space-between;
 }
 .liberties-card__wrapper{
    display: flex;
@@ -133,22 +134,19 @@
    flex: 1 1 25%;
    margin: 5px 15px;
    background: $--bg-card;
-
    img{
+      display: block;
       height: 100%;
       width: 100%;
-      //flex: 1 1 50%;
-      max-width: 400px;
-      max-height: 250px;
+      flex: 1 1 50% ;
       border-bottom: 2px solid $--bg-main;
-      margin-bottom: 20px;
    }
 }
 .liberties-card__block{
    display: flex;
+   flex: 1 0 50%;
    flex-direction: column;
    padding: 25px;
-   min-height: 200px;
 }
 .card-wrapper__tittle{
    font-family: $font-monserrat;
