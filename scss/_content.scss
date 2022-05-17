@@ -24,8 +24,11 @@
    justify-content: start;
    align-items: center;
    padding: 15px 0;
+   position: relative;
    a{
       padding-left: 45px;
+      position: relative;
+      z-index: 2;
    }
    &:first-child{
       background: $--bg-main;
@@ -33,6 +36,56 @@
          color: #fff;
       }
    }
+   &:hover{
+      cursor: pointer;
+   }
+}
+
+.aside-list--bg{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   padding: 15px 0;
+   position: relative;
+   a{
+      padding-left: 45px;
+      position: relative;
+      z-index: 2;
+   }
+   &:first-child{
+      background: $--bg-main;
+      a{
+         color: #fff;
+      }
+   }
+   &::after{
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+   }
+   &:hover{
+      cursor: pointer;
+      a{color: #fff;}
+      &::after{
+         content: '';
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         left: 0;
+         top: 0;
+         animation: move .5s ;
+         transition-duration: 1s;
+         background-color: $--bg-main;
+         z-index: 1;
+      }
+   }
+}
+@keyframes move {
+   from {width: 0;}
+   to{width: 100%;}
 }
 .aside-link{
    font-family: $font-roboto;
