@@ -131,14 +131,18 @@
 .liberties-card__wrapper{
    display: flex;
    flex-direction: column;
-   flex: 1 1 23%;
+   flex: 1 1 25%;
    margin: 10px;
    background: $--bg-card;
    img{
       display: flex;
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      //max-height: 200px;
    }
+}
+.liberties-card__img{
+   display: flex;
 }
 .liberties-card__block{
    display: flex;
