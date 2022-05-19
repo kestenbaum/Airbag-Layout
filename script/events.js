@@ -1,0 +1,3 @@
+DOM_ELEMENTS.BTN_BURGER_MENU.onclick = () => {
+    clickBurgerMenu(DOM_ELEMENTS.MENU_MOBILE_DEVICE);
+}
