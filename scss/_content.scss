@@ -116,7 +116,7 @@
 .main-container{
    display: flex;
    flex-direction: column;
-   flex: 1 1 66.66%;
+  flex: 1 1 66.66%;
 }
 .h2-tittle__liberties{
    margin-bottom: 44px;
@@ -138,7 +138,7 @@
       display: flex;
       width: 100%;
       height: 100%;
-      min-width: 250px;
+      min-width: 200px;
    }
 }
 .liberties-card__img{
@@ -256,7 +256,7 @@
       font-size: 16px;
       line-height: 160%;
       max-width: 462px;
-      min-width: 250px;
+      //min-width: 250px;
       margin-left: 15px;
    }
 }
@@ -290,7 +290,7 @@
    img{
       width: 100%;
       height: 100%;
-      min-width: 250px;
+      min-width: 200px;
       padding: 20px;
    }
 }
