@@ -24,8 +24,11 @@
    justify-content: start;
    align-items: center;
    padding: 15px 0;
+   position: relative;
    a{
       padding-left: 45px;
+      position: relative;
+      z-index: 2;
    }
    &:first-child{
       background: $--bg-main;
@@ -33,6 +36,56 @@
          color: #fff;
       }
    }
+   &:hover{
+      cursor: pointer;
+   }
+}
+
+.aside-list--bg{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   padding: 15px 0;
+   position: relative;
+   a{
+      padding-left: 45px;
+      position: relative;
+      z-index: 2;
+   }
+   &:first-child{
+      background: $--bg-main;
+      a{
+         color: #fff;
+      }
+   }
+   &::after{
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+   }
+   &:hover{
+      cursor: pointer;
+      a{color: #fff;}
+      &::after{
+         content: '';
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         left: 0;
+         top: 0;
+         animation: move .5s ;
+         transition-duration: 1s;
+         background-color: $--bg-main;
+         z-index: 1;
+      }
+   }
+}
+@keyframes move {
+   from {width: 0;}
+   to{width: 100%;}
 }
 .aside-link{
    font-family: $font-roboto;
@@ -51,6 +104,7 @@
    }
    h3{
       margin-bottom: 5px;
+      text-align: center;
    }
    p{
       margin-bottom: 15px;
@@ -62,7 +116,7 @@
 .main-container{
    display: flex;
    flex-direction: column;
-   flex: 1 1 66.66%;
+  flex: 1 1 66.66%;
 }
 .h2-tittle__liberties{
    margin-bottom: 44px;
@@ -72,29 +126,29 @@
 .liberties-cards{
    display: flex;
    flex-wrap: wrap;
+   justify-content: space-between;
 }
 .liberties-card__wrapper{
    display: flex;
    flex-direction: column;
    flex: 1 1 25%;
-   margin: 5px 15px;
+   margin: 10px;
    background: $--bg-card;
-
    img{
-      height: 100%;
+      display: flex;
       width: 100%;
-      //flex: 1 1 50%;
-      max-width: 400px;
-      max-height: 250px;
-      border-bottom: 2px solid $--bg-main;
-      margin-bottom: 20px;
+      height: 100%;
+      min-width: 200px;
    }
+}
+.liberties-card__img{
+   display: flex;
 }
 .liberties-card__block{
    display: flex;
+   flex: 0 0 50%;
    flex-direction: column;
    padding: 25px;
-   min-height: 200px;
 }
 .card-wrapper__tittle{
    font-family: $font-monserrat;
@@ -202,42 +256,45 @@
       font-size: 16px;
       line-height: 160%;
       max-width: 462px;
-      min-width: 250px;
+      //min-width: 250px;
       margin-left: 15px;
    }
 }
 
 /* Works */
+.works{
+   padding: 20px 0;
+}
 .tittle-works{
    margin-bottom: 44px;
    padding-left: 29px;
    border-left: 4px solid $--bg-main;
 }
-.slider{
-   margin-bottom: 30px;
+.wrapper-cards__row{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
 }
-.slider-slide{
-   max-width: 504px;
-}
-.slider-wrapper{
+.wrapper-card{
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   flex: 1 1 25%;
    background: #FFFFFF;
    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
    border-radius: 4px;
    max-width: 504px;
+   margin: 0 15px 15px 15px;
 
    img{
       width: 100%;
       height: 100%;
-      max-width: 500px;
-      max-height: 260px;
+      min-width: 200px;
       padding: 20px;
    }
 }
-.slider-description__block{
+.description__block{
    padding: 20px;
 }
 .work-tittle{

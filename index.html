@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -79,14 +79,44 @@
                     <li class="nav-list"><a href="#" class="nav-link">Новости</a></li>
                     <li class="nav-list"><a href="#" class="nav-link">Контакты</a></li>
                 </nav>
-                <form class="search" action="index.html">
-                    <input class="header-search" placeholder="Введите текст...">
-                    <button type="submit" class="btn-search"><img src="assets/img/search.svg" alt="search"></button>
+                <form class="search">
+                    <input class="header-search" placeholder="Введите текст..." required>
+                    <button class="btn-search"><img src="assets/img/search.svg" alt="search"></button>
                 </form>
             </div>
         </div>
     </div>
     <!-- ===== Header Navigation End ===== -->
+    <!-- ===== Header MenuBurger Start ===== -->
+    <div class="header-wrapper__mobile">
+        <div class="container">
+            <div class="header-wrapper__mobile-media">
+                <div class="header-mobile__logo">
+                    <a href="#" class="logo-tittle">AUTO AIRBAG</a>
+                </div>
+                <div class="header-mobile__menu">
+                    <div class="burger-menu">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="menu-mobile menu-mobile--none">
+                    <nav class="mobile-nav">
+                        <li class="mobile-nav__list"><a href="#" class="mobile-nav__link">О компании</a></li>
+                        <li class="mobile-nav__list"><a href="#" class="mobile-nav__link">Наши работы</a></li>
+                        <li class="mobile-nav__list"><a href="#" class="mobile-nav__link">Наши услуги</a></li>
+                        <li class="mobile-nav__list"><a href="#" class="mobile-nav__link">Новости</a></li>
+                        <li class="mobile-nav__list"><a href="#" class="mobile-nav__link">Контакты</a></li>
+                    </nav>
+                    <form class="search search-mobile">
+                        <input class="header-search" placeholder="Введите текст..." required>
+                        <button class="btn-search"><img src="assets/img/search.svg" alt="search"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--===== Header MenuBurger End ===== -->
 </header>
 <!-- ===== Header End ===== -->
 <!-- ===== First Screen  =====-->
@@ -125,33 +155,33 @@
             <aside class="aside">
                 <ul class="aside-nav">
                     <li class="aside-list">
-                        <a href="#" class="aside-link">Наши услуги</a>
+                        <a href="#" class="aside-list">Наши услуги</a>
                     </li>
-                    <li class="aside-list">
+                    <li class="aside-list aside-list--bg">
                         <a href="#" class="aside-link">Крышки Airbag оригинал</a>
                     </li>
-                    <li class="aside-list">
+                    <li class="aside-list aside-list--bg">
                         <a href="#" class="aside-link">Заглушки Airbag не оригинал</a>
                     </li>
-                    <li class="aside-list">
+                    <li class="aside-list aside-list--bg">
                         <a href="#" class="aside-link">Подушки безопасности</a>
                     </li>
-                    <li class="aside-list">
-                        <a href="#" class="aside-link">Перетяжка торпеды</a>
+                    <li class="aside-list aside-list--bg">
+                        <a href="#" class="aside-link ">Перетяжка торпеды</a>
                     </li>
-                    <li class="aside-list">
-                        <a href="#" class="aside-link">Перетяжка салона</a>
+                    <li class="aside-list aside-list--bg">
+                        <a href="#" class="aside-link ">Перетяжка салона</a>
                     </li>
-                    <li class="aside-list">
-                        <a href="#" class="aside-link">Ремни безопасности</a>
+                    <li class="aside-list aside-list--bg">
+                        <a href="#" class="aside-link ">Ремни безопасности</a>
                     </li>
-                    <li class="aside-list">
-                        <a href="#" class="aside-link">Ремонт блоков CRS</a>
+                    <li class="aside-list aside-list--bg">
+                        <a href="#" class="aside-link ">Ремонт блоков CRS</a>
                     </li>
-                    <li class="aside-list">
-                        <a href="#" class="aside-link">Ремонт подушек безопасности</a>
+                    <li class="aside-list aside-list--bg">
+                        <a href="#" class="aside-link ">Ремонт подушек безопасности</a>
                     </li>
-                    <li class="aside-list">
+                    <li class="aside-list aside-list--bg">
                         <a href="#" class="aside-link">Шемоизоляция автомобиля</a>
                     </li>
                 </ul>
@@ -202,10 +232,12 @@
             </aside>
             <main class="main-container">
                 <article class="liberties">
-                    <h2 class="h2-tittle h2-tittle__liberties">ЧТО ВЫ ПОЛУЧИТЕ ОБРАТИВШИСЬ К НАМ</h2>
+                        <h2 class="h2-tittle h2-tittle__liberties">ЧТО ВЫ ПОЛУЧИТЕ ОБРАТИВШИСЬ К НАМ</h2>
                     <div class="liberties-cards">
                         <div class="liberties-card__wrapper">
-                            <img src="assets/img/bg-card-1.png" alt="bg-card">
+                            <div class="liberties-card__img">
+                                <img src="assets/img/bg-card-1.png" alt="bg-card">
+                            </div>
                             <div class="liberties-card__block">
                                 <h4 class="card-wrapper__tittle">Обязательную гарантияна все виды выполняемых работ</h4>
                                 <p class="card-wrapper__description">В том числе на все запчасти и аксессуары,
@@ -213,7 +245,9 @@
                             </div>
                         </div>
                         <div class="liberties-card__wrapper">
-                            <img src="assets/img/bg-card-2.png" alt="bg-card">
+                            <div class="liberties-card__img">
+                                <img src="assets/img/bg-card-2.png" alt="bg-card">
+                            </div>
                             <div class="liberties-card__block">
                                 <h4 class="card-wrapper__tittle">Оперативную запись на сервис</h4>
                                 <p class="card-wrapper__description">Больше не нужно ждать дни и недели для записи на
@@ -221,7 +255,9 @@
                             </div>
                         </div>
                         <div class="liberties-card__wrapper">
-                            <img src="assets/img/bg-card-3.png" alt="bg-card">
+                            <div class="liberties-card__img">
+                                <img src="assets/img/bg-card-3.png" alt="bg-card">
+                            </div>
                             <div class="liberties-card__block">
                                 <h4 class="card-wrapper__tittle">Удобное расположение </h4>
                                 <p class="card-wrapper__description">Мы находимся по адресу: Санкт-Петербург, Невский
@@ -273,53 +309,63 @@
                 </article>
                 <article class="works">
                     <h2 class="h2-tittle tittle-works">НАШИ РАБОТЫ</h2>
-                    <div class="slider">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="slider-slide">
-                                <div class="slider-wrapper">
-                                    <img src="assets/img/work-slider-1.png">
-                                    <div class="slider-description__block">
-                                        <p class="work-tittle">Марка авто:
-                                            <span>Ford Focus</span>
-                                        </p>
-                                        <p class="work-tittle">Проведенные работы:
-                                            <span> Перетяжка торпеды</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-slide">
-                                <div class="slider-wrapper">
-                                    <img src="assets/img/work-slider-1.png">
-                                    <div class="slider-description__block">
-                                        <p class="work-tittle">Марка авто:
-                                            <span>Ford Focus</span>
-                                        </p>
-                                        <p class="work-tittle">Проведенные работы:
-                                            <span> Перетяжка торпеды</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-slide">
-                                <div class="slider-wrapper">
-                                    <img src="assets/img/work-slider-1.png">
-                                    <div class="slider-description__block">
-                                        <p class="work-tittle">Марка авто:
-                                            <span>Ford Focus</span>
-                                        </p>
-                                        <p class="work-tittle">Проведенные работы:
-                                            <span> Перетяжка торпеды</span>
-                                        </p>
-                                    </div>
-                                </div>
+                    <div class="wrapper-cards__row">
 
+                        <div class="wrapper-card">
+                            <img src="assets/img/work-slider-1.png">
+                            <div class="description__block">
+                                <p class="work-tittle">Марка авто:
+                                    <span>Ford Focus</span>
+                                </p>
+                                <p class="work-tittle">Проведенные работы:
+                                    <span> Перетяжка торпеды</span>
+                                </p>
                             </div>
                         </div>
-                        <!-- If we need pagination -->
-                        <div class="slider-pagination__work"></div>
+                        <div class="wrapper-card">
+                            <img src="assets/img/work-slider-1.png">
+                            <div class="description__block">
+                                <p class="work-tittle">Марка авто:
+                                    <span>Ford Focus</span>
+                                </p>
+                                <p class="work-tittle">Проведенные работы:
+                                    <span> Перетяжка торпеды</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="wrapper-card">
+                            <img src="assets/img/work-slider-1.png">
+                            <div class="description__block">
+                                <p class="work-tittle">Марка авто:
+                                    <span>Ford Focus</span>
+                                </p>
+                                <p class="work-tittle">Проведенные работы:
+                                    <span> Перетяжка торпеды</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="wrapper-card">
+                            <img src="assets/img/work-slider-1.png">
+                            <div class="description__block">
+                                <p class="work-tittle">Марка авто:
+                                    <span>Ford Focus</span>
+                                </p>
+                                <p class="work-tittle">Проведенные работы:
+                                    <span> Перетяжка торпеды</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="wrapper-card">
+                            <img src="assets/img/work-slider-1.png">
+                            <div class="description__block">
+                                <p class="work-tittle">Марка авто:
+                                    <span>Ford Focus</span>
+                                </p>
+                                <p class="work-tittle">Проведенные работы:
+                                    <span> Перетяжка торпеды</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </main>
