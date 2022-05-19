@@ -163,7 +163,9 @@
 }
 .header-nav{
    display: flex;
+   justify-content: flex-start;
    padding: 10px 0;
+   flex: 1 1 40%;
 }
 .nav-list{
    position: relative;
@@ -201,6 +203,7 @@
 /* search */
 .search{
    display: flex;
+   flex: 1 1 18%;
    background: $--bg-main;
    padding: 5px 0;
    margin-left: 20px;
@@ -221,7 +224,8 @@
 .header-search {
    display: flex;
    align-items: center;
-   min-width: 312px;
+   flex: 1 1 50%;
+   width: 100%;
    padding: 9px 0 9px 16px;
    background: #FEFEFE;
    border-color: transparent;
@@ -304,15 +308,17 @@
 }
 .menu-mobile{
    display: block;
-   position: absolute;
-   top: -15px;
-   right: -15px;
+   position: fixed;
+   top: -100%;
+   left: 0;
+   width: 100%;
    z-index: 20;
    transition-duration: 1.5s;
 }
 .mobile-nav{
    display: flex;
    flex-direction: column;
+   flex: 1 1 50%;
    padding: 25px; 
    background: $--bg-main;
 }
@@ -328,5 +334,6 @@
 }
 .menu-mobile--none{
    display: block;
-   right: -130%;
+   top: 0;
+   left: 0;
 }
