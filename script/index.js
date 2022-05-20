@@ -7,4 +7,3 @@ const swiper = new Swiper(('.swiper'), {
          type: 'bullets',
        },
 })
-
