@@ -161,6 +161,7 @@
 .header-contact{
    display: flex;
    justify-content: center;
+   transition-duration: 1s;
 }
 .header-nav{
    display: flex;
@@ -247,6 +248,8 @@
 
 .header-burger{
    display: none;
+   position: relative;
+   z-index: 999;
    height: 20px;
    width: 20px;
    justify-content: center;
@@ -281,5 +284,6 @@
    }
 }
 .header-menu--active{
-   right: 100%;
+   right: 0 !important;
+   transition-duration: 1s;
 }

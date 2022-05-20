@@ -426,6 +426,8 @@ span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .header-nav {
@@ -555,6 +557,8 @@ span {
 
 .header-burger {
   display: none;
+  position: relative;
+  z-index: 999;
   height: 20px;
   width: 20px;
   -webkit-box-pack: center;
@@ -598,7 +602,9 @@ span {
 }
 
 .header-menu--active {
-  right: 100%;
+  right: 0 !important;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .first-screen {
@@ -1258,6 +1264,11 @@ span {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .nav-list {
+    border-bottom: 1px solid #181818;
+    border-left: none;
+    border-right: none;
+  }
   .nav-list:hover::after {
     width: 0;
   }
@@ -1285,6 +1296,9 @@ span {
 }
 
 @media all and (max-width: 570px) {
+  .header-contact {
+    width: 100%;
+  }
   .specification-card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
