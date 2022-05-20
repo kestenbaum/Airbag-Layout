@@ -8,3 +8,9 @@ const swiper = new Swiper(('.swiper'), {
        },
 })
 
+const burgerSelector = document.querySelector('.header-burger'),
+      menuMediaScreen = document.querySelector('.header-contact')
+
+burgerSelector.onclick = () => {
+  menuMediaScreen.classList.toggle('header-menu--active')
+}
