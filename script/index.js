@@ -1,6 +1,4 @@
-const {log} = console
-
-   const swiper = new Swiper(('.swiper'), {
+const swiper = new Swiper(('.swiper'), {
       // Default parameters
       slidesPerView: 1,
       spaceBetween: 10,
@@ -8,5 +6,5 @@ const {log} = console
          el: '.swiper-pagination',
          type: 'bullets',
        },
-    })
+})
 
